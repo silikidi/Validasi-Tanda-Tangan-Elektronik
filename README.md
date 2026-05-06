@@ -18,10 +18,8 @@ Validator TTE ini memungkinkan validasi sertifikat digital pada dokumen PDF seca
 ---
 
 ## 🛠️ File Utama
-Silakan gunakan file sesuai kebutuhan Anda:
-
 1.  **[vtte.html](vtte.html)** - versi dependensi library online.
-2.  **[vtte-offline.html](vtte-offline.html)** - lokal tanpa koneksi internet.
+2.  **[vtte-offline.html](vtte-offline.html)** - versi lokal offline.
 3.  **[vtte-verify.html](vtte-verify.html)** - simulasi Audit LTA.
 
 ---
