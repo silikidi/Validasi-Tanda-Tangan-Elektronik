@@ -2,16 +2,17 @@
 
 Validator ini dirancang untuk memverifikasi dokumen PDF yang memiliki tanda tangan elektronik, dengan fokus utama pada kompatibilitas standar **BSrE (Balai Sertifikasi Elektronik)**.
 
-## 📌 Deskripsi
+## 📌 Fitur
 Validator TTE ini memungkinkan validasi sertifikat digital pada dokumen PDF secara independen dan mandiri:
 
 * **Kompatibilitas BSrE:** Dioptimalkan untuk verifikasi TTE yang dirilis oleh BSrE. (Belum teruji secara menyeluruh untuk vendor lain).
+* **Deteksi Jumlah TTE:** Mendeteksi jumlah TTE yang ditanam dalam PDF dengan menampilkan hash hex setiap TTE.
 * **Versi Online & Offline:** Tersedia versi yang dapat ditanamkan (*embedded*) di website maupun versi offline untuk penggunaan lokal tanpa internet.
 * **Mandiri (Self-contained):** Seluruh dependensi library JavaScript telah di-*bundling* ke dalam satu file lokal agar tidak bergantung pada koneksi CDN eksternal.
 
 ---
 
-## 📸 Tampilan Antarmuka
+## 📸 Screenshot
 ![Preview Validator](preview.png)
 > *Tampilan antarmuka aplikasi validator TTE.*
 
