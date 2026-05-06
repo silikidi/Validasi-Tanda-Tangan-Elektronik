@@ -1,7 +1,35 @@
-Validator Tanda Tangan Elektronik PDF Kompatibel BSRE
+# Validator Tanda Tangan Elektronik (TTE) PDF
 
-Validasi berdasarkan TTE yang dirilis BSRE, belum teruji dengan vendor lain. Tersedia dalam versi online untuk ditanamkan dalam website, dan versi offline untuk lokal tanpa koneksi internet.
+Validator ini dirancang untuk memverifikasi dokumen PDF yang memiliki tanda tangan elektronik, dengan fokus utama pada kompatibilitas standar **BSrE (Balai Sertifikasi Elektronik)**.
 
-Dependensi library javascript dibuat bundling single file js dan lokal agar tidak tergantung koneksi internet.
+## 📌 Deskripsi
+Validator TTE ini memungkinkan validasi sertifikat digital pada dokumen PDF secara independen dan mandiri:
 
-Untuk berkontribusi silahkan kontak via gmail.
+* **Kompatibilitas BSrE:** Dioptimalkan untuk verifikasi TTE yang dirilis oleh BSrE. (Belum teruji secara menyeluruh untuk vendor lain).
+* **Versi Online & Offline:** Tersedia versi yang dapat ditanamkan (*embedded*) di website maupun versi offline untuk penggunaan lokal tanpa internet.
+* **Mandiri (Self-contained):** Seluruh dependensi library JavaScript telah di-*bundling* ke dalam satu file lokal agar tidak bergantung pada koneksi CDN eksternal.
+
+---
+
+## 📸 Tampilan Antarmuka
+![Preview Validator](preview.png)
+> *Tampilan antarmuka aplikasi validator TTE.*
+
+---
+
+## 🛠️ File Utama
+Silakan gunakan file sesuai kebutuhan Anda:
+
+1.  **[vtte.html](vtte.html)** - versi dependensi library online.
+2.  **[vtte-offline.html](vtte-offline.html)** - lokal tanpa koneksi internet.
+3.  **[vtte-verify.html](vtte-verify.html)** - simulasi Audit LTA.
+
+---
+
+## 🤝 Kontribusi & Kontak
+* [gmailme](mailto:sukmasibudi@gmail.com)
+
+---
+
+## 📄 Lisensi
+Didistribusikan untuk penggunaan umum.
