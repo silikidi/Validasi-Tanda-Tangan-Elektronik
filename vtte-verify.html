@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Long-Term Availability verifikasi hasil audit tanda tangan digital">
+<meta property="og:title" content="Verifikasi LTA Audit TTE">
+<meta property="og:description" content="Long-Term Availability verifikasi hasil audit tanda tangan digital">
+<meta property="og:image" content="./aset/logo.png">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verifikasi LTA Audit TTE">
+<meta name="twitter:description" content="Long-Term Availability verifikasi hasil audit tanda tangan digital">
+<meta property="twitter:image:src" content="./aset/logo.png">
+<meta name="twitter:url" content="">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>Verifikasi LTA Audit TTE</title>
+    
+<link rel="apple-touch-icon" href="./aset/logo.png">
+<link rel="icon" type="image/svg+xml" href="./aset/logo.png">
+<link rel="canonical" href="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="./aset/googlesymbol1.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Verifikasi LTA Audit TTE",
+	"description": "Long-Term Availability verifikasi hasil audit tanda tangan digital" ,
+	"image": [
+		"aset/logo.png"
+	]
+}
+</script>
+<script src="./aset/sql-wasm.min.js"></script>
+<style>
+body {
+
+	/*KETAJAMAN FONT*/
+	text-shadow: 0 0 1px rgba(0,0,0,0.01);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	font-family: 'Google Sans Flex', 'Plus Jakarta Sans', sans-serif;
+	font-size: 1.2em;
+	line-height: 1;
+	
+	background-color: #f4f7f9;
+	color: #333;
+	margin: 0;
+	padding: 20px;
+	
+}
+.container {
+	max-width: 900px;
+	margin: auto;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+	background: white;
+}
+.header {
+	text-align: center;
+}
+.logo-img {
+	height: 60px;
+}
+.heading-1 {
+	margin-bottom: 0;
+}
+.heading-2 {
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+.heading-3 {
+	color: #1a5dab;
+	font-size: 1.2em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+p strong {
+	color: #1a5dab;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.status-container {
+	position: relatif;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 20px;
+}
+.status-box {
+	flex-grow: 1;
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.valid { background: linear-gradient(135deg,  #e8ffff 0%,#ddf1f9 35%,#a9f8fc 100%); }
+.invalid { background-color: #f8d7da; }
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+.table-container {
+	width: 100%;
+	overflow-x: auto;
+	cursor: grab;
+	user-select: none;
+	font-size: 0.8em;
+}
+.table-container:active {
+	cursor: grabbing;
+}
+.table-container::-webkit-scrollbar {
+	display: none;
+}
+
+thead {
+    background-image: linear-gradient(to right, #fc00ff 0%, #00dbde  51%, #fc00ff  100%);
+	color: white;
+}
+th {
+	padding: 12px;
+	text-align: left;
+}
+td {
+	padding: 12px;
+	border-bottom: 1px solid #eee;
+}
+.footer {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 0.8rem;
+	color: #777;
+}
+.center {
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.heading-1 {
+		font-size: 1.5em;
+		font-weight: 900;
+	}
+	.heading-2 {
+		font-size: 0.9em;
+	}
+	.heading-3 {
+		font-size: 0.9em;
+	}
+	.status-container {
+		flex-direction: column;
+	}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="header">
+        <img class="logo-img" src="./aset/logo.png" alt="Logo">
+        <h1 class="heading-1">Verifikasi Hasil Audit TTE</h2>
+        <p class="heading-2">Audit Independen Dengan Sumber Terbuka</p>
+	</div>
+
+	<!-- DEBUGGING
+	<p id="tampilan-divalidasi"></p>
+	-->
+	
+	<div id="api-result">
+        <p class="center">Memuat basis data kriptografi...</p>
+	</div>
+
+	<h3 class="heading-3">Historis Audit Terakhir</h3>
+	<div id="scroll-container" class="table-container">
+		<table id="history-table">
+			<thead>
+				<tr>
+					<th>Waktu</th>
+					<th>User</th>
+					<th>File</th>
+					<th>Kriptografi</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+    <div class="footer">
+        Simulasi LTA Audit TTE via QR Code
+    </div>
+</div>
+
+<script>
+let db;
+
+const ASET_PATH = './aset/';
+
+async function initVerifikasi() {
+    try {
+        // Memuat engine SQL.js
+        const SQL = await initSqlJs({
+            locateFile: file => `${ASET_PATH}${file}`
+        });
+
+        // Mengambil data biner dari LocalStorage
+        const savedData = localStorage.getItem("lta_database");
+        
+        if (savedData) {
+            const uInt8Array = new Uint8Array(JSON.parse(savedData));
+            db = new SQL.Database(uInt8Array);
+            console.log("Database LTA berhasil dimuat.");
+            
+            // Lanjut ke proses penampilan data
+            prosesTampilanData();
+        } else {
+            document.getElementById("api-result").innerHTML = `
+                <div class="status-box invalid">⚠️ Database Tidak Ditemukan<br>Silakan lakukan validasi di index.html terlebih dahulu.</div>`;
+        }
+    } catch (err) {
+        console.error("Gagal inisialisasi database:", err);
+        document.getElementById("api-result").innerHTML = "Error memuat engine WebAssembly.";
+    }
+}
+
+
+function prosesTampilanData() {
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        // Mengambil parameter 'v' (ID Waktu/Sesi)
+        const sessionID = urlParams.get('v');
+
+        if (sessionID) {
+
+			// Query berdasarkan ID Sesi (Waktu)
+            const res = db.exec("SELECT * FROM audit_logs WHERE sessionid = ? ORDER BY id ASC", [sessionID]);
+
+            if (res.length > 0 && res[0].values) {
+                const allRows = res[0].values;
+
+				// [0] id, [1] hash, [2] nama_user, [3] nama_file, [4] status, [5] tanggal, [6] sessionid, [7] file_hash, [8] expired, [9] crl, [10] hashstamp, [11] hashserial
+
+				// AMBIL FILE_HASH DARI BARIS PERTAMA HASIL QUERY
+				const currentFileHash = allRows[0][7];
+
+				//console.log("File Hash yang dicari: ", currentFileHash);
+
+				const totalDivalidasi = lacakTotalValidasi(currentFileHash);
+
+				/* DEBUGGING totalDivalidasi
+				const elStatistik = document.getElementById("tampilan-divalidasi");
+				if (elStatistik) elStatistik.innerText = totalDivalidasi;
+				*/
+
+                let htmlResult = `<h3 class="heading-3 center">HASIL AUDIT ${allRows[0][6]}</h3>`;
+                htmlResult += `<p class="center"><strong>PDF</strong><br>${allRows[0][3]}</p>`;
+                htmlResult += `<p class="center"><strong>PDF Divalidasi</strong><br>${totalDivalidasi} kali</p>`;
+                htmlResult += `<p class="center"><strong>Tanda Tangan Elektronik</strong><br>Terdeteksi <b>${allRows.length}</b> tanda tangan dalam PDF</p>`;
+
+				htmlResult += `<div class="status-container">`;
+
+                allRows.forEach((row, index) => {
+					htmlResult += `
+                        <div class="status-box valid">
+                            <h3 class="heading-3">Tanda Tangan #${index + 1}</h3>
+                            <p><strong>Penanda Tangan</strong><br>${row[2]}</p>
+                            <p><strong>Status TTE</strong><br>${row[4]}</p>
+                            <p><strong>Masa Berlaku</strong><br>${row[8]}</p>
+                            <p><strong>Revokasi [Pencabutan]</strong><br>${row[9]}</p>
+                            <p><strong>Diaudit</strong><br>${tglIndonesiaFormat(row[5])}</p>
+                            <p style="margin-bottom:0;"><strong>Nomor Seri Sertifikat</strong></p>
+                            <code style="overflow-wrap: break-word; word-break: break-all; text-align: left; text-transform: uppercase;">${row[11]}</code>
+                            <p style="margin-bottom:0;"><strong>Hash Hex</strong></p>
+                            <code style="overflow-wrap: break-word; word-break: break-all; text-align: left; text-transform: uppercase;">${row[10]}</code>
+                        </div>
+                    `;
+                });
+
+				htmlResult += `</div>`;
+
+                document.getElementById("api-result").innerHTML = htmlResult;
+
+                renderHistoryTable(allRows[0][2]);
+            }
+        }
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+
+function renderHistoryTable( userNama ) {
+    const tbody = document.querySelector("#history-table tbody");
+    if (!tbody) return;
+    tbody.innerHTML = "";
+    try {
+		const historyQuery = db.exec("SELECT * FROM audit_logs WHERE nama_user = ? ORDER BY id DESC LIMIT 20", [userNama]);
+
+        if (historyQuery.length > 0) {
+            historyQuery[0].values.forEach( r => {
+                const tr = document.createElement("tr");
+
+				// [0] id, [1] hash, [2] nama_user, [3] nama_file, [4] status, [5] tanggal, [6] sessionid, [7] file_hash, [8] expired, [9] crl, [10] hashstamp
+
+				tr.innerHTML = `
+                    <td>${tglIndonesiaFormat(r[5])}</td>
+                    <td>${r[2]}</td>
+                    <td>${r[3]}</td>
+                    <td>${r[4]}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        } else {
+            tbody.innerHTML = "<tr><td colspan='3' style='text-align:center;'>Tidak ada riwayat untuk user ini.</td></tr>";
+        }
+    } catch (err) {
+        console.error("Error rendering table:", err);
+    }
+}
+
+function lacakTotalValidasi( file_hash ) {
+    try {
+        // gunakan TRIM untuk membersihkan spasi tak terlihat
+        const sql = "SELECT DISTINCT sessionid FROM audit_logs WHERE TRIM(file_hash) = TRIM(?)";
+        const res = db.exec(sql, [file_hash]);
+        if (res.length > 0 && res[0].values) {
+            const daftarSesi = res[0].values;
+            return daftarSesi.length;
+        }
+        return 1;
+    } catch (e) {
+        console.error("Gagal kueri statistik:", e);
+        return 1;
+    }
+}
+
+
+//---> Jalankan saat halaman siap
+window.onload = initVerifikasi;
+
+
+//---> FORMAT TANGGAL INDONESIA CUSTOM
+const tglIndonesiaFormat = (tanggal) => {
+	let d;
+	if (tanggal instanceof Date && !isNaN(tanggal)) {
+		d = tanggal;
+	} else if (typeof tanggal === 'string') {
+		// Memisahkan "07/01/2026, 10.08.26"
+		const [tglPart, jamPart] = tanggal.split(', ');
+		const [hari, bulan, tahun] = tglPart.split('/');
+		const [jam, menit, detik] = jamPart ? jamPart.split('.') : [0, 0, 0];
+
+		d = new Date(tahun, bulan - 1, hari, jam, menit, detik);
+	}
+	
+	if (!d || isNaN(d.getTime())) return "Format Tidak Valid";
+	
+	const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+	const namaBulan = [
+		"Januari", "Februari", "Maret", "April", "Mei", "Juni",
+		"Juli", "Agustus", "September", "Oktober", "November", "Desember"
+	];
+
+	const hariNama = namaHari[d.getDay()];
+	const tanggalDigit = d.getDate();
+	const bulanNama = namaBulan[d.getMonth()];
+	const tahunFull = d.getFullYear();
+  
+	const jamFull = String(d.getHours()).padStart(2, '0');
+	const menitFull = String(d.getMinutes()).padStart(2, '0');
+	const detikFull = String(d.getSeconds()).padStart(2, '0');
+
+	return `${hariNama}, ${tanggalDigit} ${bulanNama} ${tahunFull} ${jamFull}:${menitFull}:${detikFull} WIB`;
+
+};
+
+
+//---> HANDLING SMOOTH SCROLL TABLE
+const slider = document.getElementById('scroll-container');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+	isDown = true;
+	slider.classList.add('active');
+	startX = e.pageX - slider.offsetLeft;
+	scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+	isDown = false;
+});
+
+slider.addEventListener('mouseup', () => {
+	isDown = false;
+});
+
+slider.addEventListener('mousemove', (e) => {
+	if (!isDown) return;
+	e.preventDefault();
+	const x = e.pageX - slider.offsetLeft;
+	const walk = (x - startX) * 2;
+	slider.scrollLeft = scrollLeft - walk;
+});
+
+window.addEventListener('beforeunload', () => {
+    if (typeof db !== 'undefined' && db) {
+        try {
+            db.close();
+            console.log("Koneksi database di halaman verifikasi ditutup.");
+        } catch (e) {
+            console.error("Gagal menutup database:", e);
+        }
+    }
+});
+</script>
+
+</body>
+</html>

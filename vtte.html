@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id-id" style="--document-width: 100vw;--document-height: 100vh">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sukma Budi with Gemini">
+<meta name="description" content="Cara mudah validasi tanda tangan elektronik pada dokumen PDF. Cek status sertifikat digital dan pastikan dokumen Anda sah secara hukum hanya dalam beberapa detik.">
+<meta property="og:title" content="Validasi PDF Tanda Tangan Elektronik">
+<meta property="og:description" content="Cara mudah validasi tanda tangan elektronik pada dokumen PDF. Cek status sertifikat digital dan pastikan dokumen Anda sah secara hukum hanya dalam beberapa detik.">
+<meta property="og:image" content="./aset/logo.png">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="Official Website">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Validasi PDF Tanda Tangan Elektronik">
+<meta name="twitter:description" content="Cara mudah validasi tanda tangan elektronik pada dokumen PDF. Cek status sertifikat digital dan pastikan dokumen Anda sah secara hukum hanya dalam beberapa detik.">
+<meta property="twitter:image:src" content="./aset/logo.png">
+<meta name="twitter:url" content="">
+<meta name="twitter:site" content="@rscibabat">
+
+<title>Validasi PDF Tanda Tangan Elektronik</title>
+    
+<link rel="apple-touch-icon" href="./aset/logo.png">
+<link rel="icon" type="image/svg+xml" href="./aset/logo.png">
+<link rel="canonical" href="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="./aset/googlesymbol1.css" rel="stylesheet">
+<link href="./aset/0_index.css" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Validasi PDF Tanda Tangan Elektronik",
+	"description": "Cara mudah validasi tanda tangan elektronik pada dokumen PDF. Cek status sertifikat digital dan pastikan dokumen Anda sah secara hukum hanya dalam beberapa detik." ,
+	"image": [
+		"aset/logo.png"
+	]
+}
+</script>
+
+</head>
+<body>
+
+<!-- LOGO ATAS -->
+<div class="logo-container">
+	<img src="aset/logo.png" alt="Logo RSC" class="logo">
+</div>
+
+<div class="container">
+
+	<div class="header-container">
+		<div class="header-card">
+			<h1>Validasi PDF Tanda Tangan Elektronik</h1>
+			<p>Validator Independen Dengan Sumber Terbuka</p>
+		</div>
+
+		<div class="upload-area" onclick="document.getElementById('fileInput').click()">
+			<p>Klik atau Drop file PDF di sini</p>
+			<span class="btn-upload">Pilih Dokumen</span>
+			<input id="fileInput" type="file" accept=".pdf">
+			<p>Privasi proses di lokal browser<br> PDF tidak diunggah ke server mana pun</p>
+		</div>
+	</div>
+
+	<div id="resultsContainer"></div>
+
+	<!-- VERTICAL BRAND -->
+	<div class="vertical-tag left">
+		<span>begin brand</span>
+		<span>middle brand</span>
+		<span>end brand</span>
+	</div>
+
+	<div class="vertical-tag right">
+		<span>begin brand</span>
+		<span>middle brand</span>
+		<span>end brand</span>
+	</div>
+	<!-- VERTICAL BRAND -->
+
+</div>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-container">
+	<span>Github</span>
+	<div>https://github.com/silikidi/validasi-tte</div>
+	<span>Platform</span>
+	<div>Vanilla JS Web Based Full Stack Serverless</div>
+	<span>JS Library</span>
+	<div>ASN1 + PKI + PDFLib + JSPDF + QR Code Styling</div>
+	<span>Serverless API RESTful</span>
+	<div>SQL JS SQLite WebAssembly</div>
+	<span>Logic</span>
+	<div>BSrE BSSN Compatible</div>
+	<br><br>
+	<span>Versi Browser Minimal</span>
+	<div>Google Chrome 80+, Microsoft Edge 80+, Firefox 74+, Safari 13.1+ [semua browser harus mendukung WebAssembly]</div>
+	<span>Fitur JS Minimal</span>
+	<div>ES2017 [Async/Await] - ES2020 [Optional Chaining ?.] - ES6 [Template Literals + Arrow Functions + Modules import/export]</div>
+</div>
+
+<!-- DATA ATTRIBUTE CONTAINER -->
+<div id="data-container"></div>
+
+
+<!--
+JIKA MENGGUNAKAN LIBRARY DARI CDN
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.min.js"></script>
+<script src="https://unpkg.com/qr-code-styling@1.9.2/lib/qr-code-styling.js"></script>
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.3/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/5.0.2/jspdf.plugin.autotable.min.js"></script>
+<script type="module">
+import * as asn1js from "https://esm.sh/asn1js";
+import * as pkijs from "https://esm.sh/pkijs";
+const crypto = window.crypto || window.msCrypto;
+pkijs.setEngine("browserEngine", crypto, new pkijs.CryptoEngine({ name: "browserEngine", crypto, subtle: crypto.subtle }));
+-->
+
+
+
+<!--
+================================================================== HAPUS BAGIAN INI HANYA SEBAGAI SIMULASI DATABASE VERIFIKASI
+================================================================== INISIALISASI DATABASE BROWSER CLIENT SIDE begin
+-->
+<script src="aset/sql-wasm.min.js"></script>
+<!--
+================================================================== INISIALISASI DATABASE BROWSER CLIENT SIDE end
+================================================================== HAPUS BAGIAN INI HANYA SEBAGAI SIMULASI DATABASE VERIFIKASI
+-->
+
+
+
+<script src="aset/pdf-lib.min.js"></script>
+<script src="aset/pki.bundle.min.js"></script>
+<script src="aset/jspdf.umd.min.js"></script>
+<script src="aset/jspdf.plugin.autotable.min.js"></script>
+<script src="aset/GoogleSansFlexBase64.js"></script>
+<script src="aset/qr-code-styling.js"></script>
+<script src="aset/0_index.js"></script>
+
+</body>
+</html>
