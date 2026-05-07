@@ -26,6 +26,7 @@ Validator TTE ini memungkinkan validasi sertifikat digital pada dokumen PDF seca
 ---
 
 ## 🤝 Kontribusi & Kontak
+* [Support Donasi](https://saweria.co/sukmabudi)
 * [gmailme](mailto:sukmasibudi@gmail.com)
 
 ---
